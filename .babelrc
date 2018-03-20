@@ -1,0 +1,14 @@
+{
+  "presets": [
+    ["env", {
+      "target": {
+        "browsers": ["last 2 versions"]
+      },
+      "development": {
+        "presets": ["react-hmre"]
+      }
+    }],
+    "react"
+  ],
+  "plugins": ["transform-object-rest-spread", "transform-class-properties"]
+}

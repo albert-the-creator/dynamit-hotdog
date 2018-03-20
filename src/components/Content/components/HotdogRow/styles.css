@@ -1,0 +1,62 @@
+.hotdog-row {
+  color: #555559;
+  padding-bottom: 4em;
+}
+
+.hotdog-row > div.align-right {
+  grid-area: right;
+}
+.hotdog-row > div.align-left {
+  grid-area: left;
+}
+
+.hotdog-row > div {
+  display: flex;
+  flex-flow: column;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.hotdog-row > div:first-child + div > div {
+  width: 50%;
+  position: relative;
+}
+
+.hotdog-row div.line {
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  left: -45px;
+  top: 27px;
+  border-bottom: 2px solid #286782;
+}
+
+.hotdog-row div.text {
+  font-weight: 300;
+  font-size: 1em;
+}
+
+.hotdog-row img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media(min-width: 768px) {
+  .hotdog-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 540px;
+    grid-template-areas: "left right";
+    padding-bottom: inherit;
+  }
+  
+  .hotdog-row > div.align-right {
+    grid-area: right;
+  }
+  .hotdog-row > div.align-left {
+    grid-area: left;
+  }
+  
+}
